@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinhacao</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card  container mt-2" id="cardInicio">
+        <h1>Jogo da Forca </h1>
+        <div id="c1" class="row ">
+            <div class="col">
+                <input type="text" class="form-control  m-2" id="chave1" placeholder="Digite uma palavra">
+            </div>
+            <div class="col">
+                <button class="form-control col-1 m-2 btn btn-secondary " id="b1"
+                    onclick="adicionarPalavra(this)">+</button>
+            </div>
+        </div>
+
+        <div id="c2" class="d-none row">
+            <div class="col">
+                <input type="text" class="form-control m-2" id="chave2" placeholder="Digite uma palavra">
+            </div>
+            <div class="col">
+                <button class="form-control m-2 btn btn-secondary col-10" id="b2"
+                    onclick="adicionarPalavra(this)">+</button>
+            </div>
+        </div>
+
+        <div id="c3" class="d-none row">
+            <div class="col">
+                <input type="text" class="form-control m-2" id="chave3" placeholder="Digite uma palavra">
+            </div>
+            <div class="col">
+                <button class="form-control m-2 btn btn-secondary col-10" id="b3"
+                    onclick="adicionarPalavra(this)">+</button>
+            </div>
+        </div>
+
+        <div id="c4" class="d-none row">
+            <div class="col">
+                <input type="text" class="form-control m-2" id="chave4" placeholder="Digite uma palavra">
+            </div>
+            <div class="col">
+                <button class="form-control m-2 btn btn-secondary col-10" id="b4"
+                    onclick="adicionarPalavra(this)">+</button>
+            </div>
+        </div>
+
+        <div id="c5" class="d-none row">
+            <div class="col">
+                <input type="text" class="form-control m-2" id="chave5" placeholder="Digite uma palavra">
+            </div>
+
+        </div>
+        <button class="btn btn-primary m-2" onclick="iniciar()">Iniciar</button>
+    </div>
+
+    <div class="card container mt-2 d-none" id="cardJogo">
+        <div class="m-2">
+            <h1 id="palavra"></h1>
+        </div>
+        <input type="text" class="form-control m-2" id="letra" maxlength="1">
+        <h3 id="tentativas">Quantidade de tentativas: 6 </h3>
+        <div class="row">
+            <img src="image/jogo-da-forca6.png" alt="" class="col-4" id="imagem">
+        </div>
+        <input type="text" class="form-control" id="letra" maxlength="1">
+        <p id="letrasDigitadas">Letras digitadas: </p>
+        <button class="btn btn-primary m-2" onclick="verificar()">Verificar</button>
+        <button class="btn btn-primary m-2" type="reset" onclick="reiniciar()">Reiniciar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
